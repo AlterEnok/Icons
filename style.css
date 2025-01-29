@@ -23,9 +23,9 @@ body {
     text-decoration: none;
     transition: 0.3s ease;
     position: relative;
-
 }
 
+/* Улучшенное свечение */
 .icon::before {
     content: "";
     position: absolute;
@@ -34,44 +34,46 @@ body {
     border-radius: 50%;
     background: transparent;
     box-shadow: 0 0 0px transparent;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.6s ease-in-out;
     z-index: -1;
 }
 
-
+/* Теперь свечение более заметное */
 .icon:hover::before {
-    transform: scale(1.8);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.9);
+    /* Увеличил масштаб свечения */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    /* Более яркое свечение */
+    opacity: 0.8;
 }
 
-
+/* Иконки становятся черными при наведении */
 .icon:hover i {
     color: black;
 }
 
-
+/* Яркие эффекты свечения для каждой соцсети */
 .facebook:hover::before {
     background: #1877F2;
-    box-shadow: 0 0 30px #1877F2;
+    box-shadow: 0 0 60px #1877F2, 0 0 120px #1877F2;
 }
 
 .instagram:hover::before {
     background: #e06908;
-    box-shadow: 0 0 30px #e06908;
+    box-shadow: 0 0 60px #e06908, 0 0 120px #e06908;
 }
 
 .twitter:hover::before {
     background: #1DA1F2;
-    box-shadow: 0 0 30px #1DA1F2;
+    box-shadow: 0 0 60px #1DA1F2, 0 0 120px #1DA1F2;
 }
 
 .tiktok:hover::before {
     background: #E4405F;
-    box-shadow: 0 0 30px #E4405F;
-
+    box-shadow: 0 0 60px #E4405F, 0 0 120px #E4405F;
 }
 
 .whatsapp:hover::before {
     background: #25D366;
-    box-shadow: 0 0 30px #25D366;
+    box-shadow: 0 0 60px #25D366, 0 0 120px #25D366;
 }
